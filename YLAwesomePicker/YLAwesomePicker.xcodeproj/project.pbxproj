@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		455048011EF374A700CC0499 /* YLTestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 455048001EF374A700CC0499 /* YLTestData.m */; };
+		456325041EF26757000AD9AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 456325031EF26757000AD9AF /* main.m */; };
+		456325071EF26757000AD9AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 456325061EF26757000AD9AF /* AppDelegate.m */; };
+		4563250A1EF26758000AD9AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 456325091EF26758000AD9AF /* ViewController.m */; };
+		4563250D1EF26758000AD9AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4563250B1EF26758000AD9AF /* Main.storyboard */; };
+		4563250F1EF26758000AD9AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4563250E1EF26758000AD9AF /* Assets.xcassets */; };
+		456325121EF26758000AD9AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456325101EF26758000AD9AF /* LaunchScreen.storyboard */; };
+		4563251D1EF26759000AD9AF /* YLAwesomePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4563251C1EF26759000AD9AF /* YLAwesomePickerTests.m */; };
+		456325281EF26759000AD9AF /* YLAwesomePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 456325271EF26759000AD9AF /* YLAwesomePickerUITests.m */; };
+		456325381EF2686A000AD9AF /* YLAwesomeSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 456325371EF2686A000AD9AF /* YLAwesomeSheetController.m */; };
+		4563253B1EF26B39000AD9AF /* YLDataConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4563253A1EF26B39000AD9AF /* YLDataConfiguration.m */; };
+		4563253E1EF26B6C000AD9AF /* YLAwesomeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4563253D1EF26B6C000AD9AF /* YLAwesomeData.m */; };
+		45CCB06D1EFB788600A76776 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 45CCB06A1EFB788600A76776 /* area.json */; };
+		45CCB06E1EFB788600A76776 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 45CCB06B1EFB788600A76776 /* city.json */; };
+		45CCB06F1EFB788600A76776 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = 45CCB06C1EFB788600A76776 /* province.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		456325191EF26758000AD9AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 456324F71EF26757000AD9AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 456324FE1EF26757000AD9AF;
+			remoteInfo = YLAwesomePicker;
+		};
+		456325241EF26759000AD9AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 456324F71EF26757000AD9AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 456324FE1EF26757000AD9AF;
+			remoteInfo = YLAwesomePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		455047FF1EF374A700CC0499 /* YLTestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTestData.h; sourceTree = "<group>"; };
+		455048001EF374A700CC0499 /* YLTestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTestData.m; sourceTree = "<group>"; };
+		456324FF1EF26757000AD9AF /* YLAwesomePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLAwesomePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		456325031EF26757000AD9AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		456325051EF26757000AD9AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		456325061EF26757000AD9AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		456325081EF26758000AD9AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		456325091EF26758000AD9AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4563250C1EF26758000AD9AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4563250E1EF26758000AD9AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		456325111EF26758000AD9AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		456325131EF26758000AD9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456325181EF26758000AD9AF /* YLAwesomePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLAwesomePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4563251C1EF26759000AD9AF /* YLAwesomePickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLAwesomePickerTests.m; sourceTree = "<group>"; };
+		4563251E1EF26759000AD9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456325231EF26759000AD9AF /* YLAwesomePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLAwesomePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		456325271EF26759000AD9AF /* YLAwesomePickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLAwesomePickerUITests.m; sourceTree = "<group>"; };
+		456325291EF26759000AD9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456325361EF2686A000AD9AF /* YLAwesomeSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAwesomeSheetController.h; sourceTree = "<group>"; };
+		456325371EF2686A000AD9AF /* YLAwesomeSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAwesomeSheetController.m; sourceTree = "<group>"; };
+		456325391EF26B39000AD9AF /* YLDataConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLDataConfiguration.h; sourceTree = "<group>"; };
+		4563253A1EF26B39000AD9AF /* YLDataConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLDataConfiguration.m; sourceTree = "<group>"; };
+		4563253C1EF26B6C000AD9AF /* YLAwesomeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAwesomeData.h; sourceTree = "<group>"; };
+		4563253D1EF26B6C000AD9AF /* YLAwesomeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAwesomeData.m; sourceTree = "<group>"; };
+		4563253F1EF2773F000AD9AF /* YLAwesomeDataDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLAwesomeDataDelegate.h; sourceTree = "<group>"; };
+		45CCB06A1EFB788600A76776 /* area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
+		45CCB06B1EFB788600A76776 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		45CCB06C1EFB788600A76776 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		456324FC1EF26757000AD9AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456325151EF26758000AD9AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456325201EF26759000AD9AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		456324F61EF26757000AD9AF = {
+			isa = PBXGroup;
+			children = (
+				456325011EF26757000AD9AF /* YLAwesomePicker */,
+				4563251B1EF26758000AD9AF /* YLAwesomePickerTests */,
+				456325261EF26759000AD9AF /* YLAwesomePickerUITests */,
+				456325001EF26757000AD9AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		456325001EF26757000AD9AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				456324FF1EF26757000AD9AF /* YLAwesomePicker.app */,
+				456325181EF26758000AD9AF /* YLAwesomePickerTests.xctest */,
+				456325231EF26759000AD9AF /* YLAwesomePickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		456325011EF26757000AD9AF /* YLAwesomePicker */ = {
+			isa = PBXGroup;
+			children = (
+				45CCB0691EFB787900A76776 /* Data */,
+				456325351EF2685A000AD9AF /* Class */,
+				456325051EF26757000AD9AF /* AppDelegate.h */,
+				456325061EF26757000AD9AF /* AppDelegate.m */,
+				456325081EF26758000AD9AF /* ViewController.h */,
+				456325091EF26758000AD9AF /* ViewController.m */,
+				4563250B1EF26758000AD9AF /* Main.storyboard */,
+				4563250E1EF26758000AD9AF /* Assets.xcassets */,
+				456325101EF26758000AD9AF /* LaunchScreen.storyboard */,
+				456325131EF26758000AD9AF /* Info.plist */,
+				456325021EF26757000AD9AF /* Supporting Files */,
+				455047FF1EF374A700CC0499 /* YLTestData.h */,
+				455048001EF374A700CC0499 /* YLTestData.m */,
+			);
+			path = YLAwesomePicker;
+			sourceTree = "<group>";
+		};
+		456325021EF26757000AD9AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				456325031EF26757000AD9AF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4563251B1EF26758000AD9AF /* YLAwesomePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4563251C1EF26759000AD9AF /* YLAwesomePickerTests.m */,
+				4563251E1EF26759000AD9AF /* Info.plist */,
+			);
+			path = YLAwesomePickerTests;
+			sourceTree = "<group>";
+		};
+		456325261EF26759000AD9AF /* YLAwesomePickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				456325271EF26759000AD9AF /* YLAwesomePickerUITests.m */,
+				456325291EF26759000AD9AF /* Info.plist */,
+			);
+			path = YLAwesomePickerUITests;
+			sourceTree = "<group>";
+		};
+		456325351EF2685A000AD9AF /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				4563253F1EF2773F000AD9AF /* YLAwesomeDataDelegate.h */,
+				4563253C1EF26B6C000AD9AF /* YLAwesomeData.h */,
+				4563253D1EF26B6C000AD9AF /* YLAwesomeData.m */,
+				456325391EF26B39000AD9AF /* YLDataConfiguration.h */,
+				4563253A1EF26B39000AD9AF /* YLDataConfiguration.m */,
+				456325361EF2686A000AD9AF /* YLAwesomeSheetController.h */,
+				456325371EF2686A000AD9AF /* YLAwesomeSheetController.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		45CCB0691EFB787900A76776 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				45CCB06A1EFB788600A76776 /* area.json */,
+				45CCB06B1EFB788600A76776 /* city.json */,
+				45CCB06C1EFB788600A76776 /* province.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		456324FE1EF26757000AD9AF /* YLAwesomePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4563252C1EF26759000AD9AF /* Build configuration list for PBXNativeTarget "YLAwesomePicker" */;
+			buildPhases = (
+				456324FB1EF26757000AD9AF /* Sources */,
+				456324FC1EF26757000AD9AF /* Frameworks */,
+				456324FD1EF26757000AD9AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YLAwesomePicker;
+			productName = YLAwesomePicker;
+			productReference = 456324FF1EF26757000AD9AF /* YLAwesomePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		456325171EF26758000AD9AF /* YLAwesomePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4563252F1EF26759000AD9AF /* Build configuration list for PBXNativeTarget "YLAwesomePickerTests" */;
+			buildPhases = (
+				456325141EF26758000AD9AF /* Sources */,
+				456325151EF26758000AD9AF /* Frameworks */,
+				456325161EF26758000AD9AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4563251A1EF26758000AD9AF /* PBXTargetDependency */,
+			);
+			name = YLAwesomePickerTests;
+			productName = YLAwesomePickerTests;
+			productReference = 456325181EF26758000AD9AF /* YLAwesomePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		456325221EF26759000AD9AF /* YLAwesomePickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 456325321EF26759000AD9AF /* Build configuration list for PBXNativeTarget "YLAwesomePickerUITests" */;
+			buildPhases = (
+				4563251F1EF26759000AD9AF /* Sources */,
+				456325201EF26759000AD9AF /* Frameworks */,
+				456325211EF26759000AD9AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				456325251EF26759000AD9AF /* PBXTargetDependency */,
+			);
+			name = YLAwesomePickerUITests;
+			productName = YLAwesomePickerUITests;
+			productReference = 456325231EF26759000AD9AF /* YLAwesomePickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		456324F71EF26757000AD9AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "TK-001289";
+				TargetAttributes = {
+					456324FE1EF26757000AD9AF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = M3Y7JKHK66;
+						ProvisioningStyle = Automatic;
+					};
+					456325171EF26758000AD9AF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = M3Y7JKHK66;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 456324FE1EF26757000AD9AF;
+					};
+					456325221EF26759000AD9AF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = M3Y7JKHK66;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 456324FE1EF26757000AD9AF;
+					};
+				};
+			};
+			buildConfigurationList = 456324FA1EF26757000AD9AF /* Build configuration list for PBXProject "YLAwesomePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 456324F61EF26757000AD9AF;
+			productRefGroup = 456325001EF26757000AD9AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				456324FE1EF26757000AD9AF /* YLAwesomePicker */,
+				456325171EF26758000AD9AF /* YLAwesomePickerTests */,
+				456325221EF26759000AD9AF /* YLAwesomePickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		456324FD1EF26757000AD9AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456325121EF26758000AD9AF /* LaunchScreen.storyboard in Resources */,
+				45CCB06E1EFB788600A76776 /* city.json in Resources */,
+				4563250F1EF26758000AD9AF /* Assets.xcassets in Resources */,
+				45CCB06D1EFB788600A76776 /* area.json in Resources */,
+				4563250D1EF26758000AD9AF /* Main.storyboard in Resources */,
+				45CCB06F1EFB788600A76776 /* province.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456325161EF26758000AD9AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456325211EF26759000AD9AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		456324FB1EF26757000AD9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4563250A1EF26758000AD9AF /* ViewController.m in Sources */,
+				456325071EF26757000AD9AF /* AppDelegate.m in Sources */,
+				4563253E1EF26B6C000AD9AF /* YLAwesomeData.m in Sources */,
+				455048011EF374A700CC0499 /* YLTestData.m in Sources */,
+				456325041EF26757000AD9AF /* main.m in Sources */,
+				456325381EF2686A000AD9AF /* YLAwesomeSheetController.m in Sources */,
+				4563253B1EF26B39000AD9AF /* YLDataConfiguration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456325141EF26758000AD9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4563251D1EF26759000AD9AF /* YLAwesomePickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4563251F1EF26759000AD9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456325281EF26759000AD9AF /* YLAwesomePickerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4563251A1EF26758000AD9AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 456324FE1EF26757000AD9AF /* YLAwesomePicker */;
+			targetProxy = 456325191EF26758000AD9AF /* PBXContainerItemProxy */;
+		};
+		456325251EF26759000AD9AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 456324FE1EF26757000AD9AF /* YLAwesomePicker */;
+			targetProxy = 456325241EF26759000AD9AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4563250B1EF26758000AD9AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4563250C1EF26758000AD9AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		456325101EF26758000AD9AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				456325111EF26758000AD9AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4563252A1EF26759000AD9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4563252B1EF26759000AD9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4563252D1EF26759000AD9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M3Y7JKHK66;
+				INFOPLIST_FILE = YLAwesomePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4563252E1EF26759000AD9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M3Y7JKHK66;
+				INFOPLIST_FILE = YLAwesomePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		456325301EF26759000AD9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M3Y7JKHK66;
+				INFOPLIST_FILE = YLAwesomePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YLAwesomePicker.app/YLAwesomePicker";
+			};
+			name = Debug;
+		};
+		456325311EF26759000AD9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M3Y7JKHK66;
+				INFOPLIST_FILE = YLAwesomePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YLAwesomePicker.app/YLAwesomePicker";
+			};
+			name = Release;
+		};
+		456325331EF26759000AD9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M3Y7JKHK66;
+				INFOPLIST_FILE = YLAwesomePickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YLAwesomePicker;
+			};
+			name = Debug;
+		};
+		456325341EF26759000AD9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M3Y7JKHK66;
+				INFOPLIST_FILE = YLAwesomePickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YLAwesomePicker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		456324FA1EF26757000AD9AF /* Build configuration list for PBXProject "YLAwesomePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4563252A1EF26759000AD9AF /* Debug */,
+				4563252B1EF26759000AD9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4563252C1EF26759000AD9AF /* Build configuration list for PBXNativeTarget "YLAwesomePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4563252D1EF26759000AD9AF /* Debug */,
+				4563252E1EF26759000AD9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4563252F1EF26759000AD9AF /* Build configuration list for PBXNativeTarget "YLAwesomePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456325301EF26759000AD9AF /* Debug */,
+				456325311EF26759000AD9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		456325321EF26759000AD9AF /* Build configuration list for PBXNativeTarget "YLAwesomePickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456325331EF26759000AD9AF /* Debug */,
+				456325341EF26759000AD9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 456324F71EF26757000AD9AF /* Project object */;
+}
