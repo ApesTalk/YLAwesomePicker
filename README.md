@@ -10,9 +10,7 @@ A custom data picker that requires only three lines of code to record and displa
 UIActionSheet(or UIAlertController)使用。而且，有时候项目中可能会有很多页面需要这种功能。这种情况下，我们以前的做法是在每个需要的页面：
 
 1.创建UIPickerView和UIActionSheet(or UIAlertController)并设置代理;
-
 2.实现一系列的代理方法，在代理方法中实现一切必须的数据逻辑；
-
 3.记录UIPickerView选中的数据，在确认选择之后处理其选择的数据并展示。
 
 这么做太糟糕了，耗时而且麻烦。于是，YLAwesomePicker产生了，YLAwesomePicker实现了我们常常需要的性别、年龄、工作经验、学历、开始时间、截止时间
