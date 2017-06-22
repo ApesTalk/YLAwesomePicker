@@ -36,19 +36,19 @@ YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initWithTitle
 
 ```
 NSDictionary *data = @{@0:@[[[YLAwesomeData alloc]initWithId:0 name:@"红色"],
-                               [[YLAwesomeData alloc]initWithId:1 name:@"橙色"],
-                               [[YLAwesomeData alloc]initWithId:2 name:@"黄色"],
-                               [[YLAwesomeData alloc]initWithId:3 name:@"绿色"],
-                               [[YLAwesomeData alloc]initWithId:4 name:@"青色"],
-                               [[YLAwesomeData alloc]initWithId:5 name:@"蓝色"],
-                               [[YLAwesomeData alloc]initWithId:6 name:@"紫色"]],
-                           @1:@[[[YLAwesomeData alloc]initWithId:0 name:@"S码"],
-                                [[YLAwesomeData alloc]initWithId:2 name:@"M码"],
-                                [[YLAwesomeData alloc]initWithId:3 name:@"L码"],
-                                [[YLAwesomeData alloc]initWithId:4 name:@"XL码"],
-                                [[YLAwesomeData alloc]initWithId:5 name:@"XXL码"],
-                                [[YLAwesomeData alloc]initWithId:6 name:@"XXXL码"]]
-                           };
+                            [[YLAwesomeData alloc]initWithId:1 name:@"橙色"],
+                            [[YLAwesomeData alloc]initWithId:2 name:@"黄色"],
+                            [[YLAwesomeData alloc]initWithId:3 name:@"绿色"],
+                            [[YLAwesomeData alloc]initWithId:4 name:@"青色"],
+                            [[YLAwesomeData alloc]initWithId:5 name:@"蓝色"],
+                            [[YLAwesomeData alloc]initWithId:6 name:@"紫色"]],
+                       @1:@[[[YLAwesomeData alloc]initWithId:0 name:@"S码"],
+                            [[YLAwesomeData alloc]initWithId:2 name:@"M码"],
+                            [[YLAwesomeData alloc]initWithId:3 name:@"L码"],
+                            [[YLAwesomeData alloc]initWithId:4 name:@"XL码"],
+                            [[YLAwesomeData alloc]initWithId:5 name:@"XXL码"],
+                            [[YLAwesomeData alloc]initWithId:6 name:@"XXXL码"]]
+                      };
                            
 YLDataConfiguration *config = [[YLDataConfiguration alloc]initWithData:data selectedData:selectedData];
 YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initWithTitle:testData.title 
