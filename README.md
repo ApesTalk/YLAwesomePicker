@@ -65,5 +65,5 @@ YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initWithTitle
 
 ## 效果图
 
-![]()
+![](https://github.com/lqcjdx/YLAwesomePicker/blob/master/picker.gif)
 
