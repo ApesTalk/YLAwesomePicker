@@ -145,17 +145,19 @@ static CGFloat cellHeight = 55;
         YLAwesomeData *selectedData = [_dataConfiguration defaultSelectDataInComponent:i];
         if(!selectedData){
             NSArray *currentDatas = _dataConfiguration.dataSource[@(i)];
-            if(currentDatas.count > 0){
+            if(currentDatas && currentDatas.count > 0){
                 selectedData = currentDatas[0];
             }
         }
         
         if(selectedData){
             NSArray *array = _dataConfiguration.dataSource[@(i)];
-            NSInteger row = [array indexOfObject:selectedData];
-            if(row != NSNotFound){
-                [_picker selectRow:row inComponent:i animated:NO];
-                [self pickerView:_picker didSelectRow:row inComponent:i];
+            if(array){
+                NSInteger row = [array indexOfObject:selectedData];
+                if(row != NSNotFound){
+                    [_picker selectRow:row inComponent:i animated:NO];
+                    [self pickerView:_picker didSelectRow:row inComponent:i];
+                }
             }
         }
     }
@@ -172,7 +174,9 @@ static CGFloat cellHeight = 55;
 {
     if(component < _componentCount){
         NSArray *array = _dataConfiguration.dataSource[@(component)];
-        return array.count;
+        if(array){
+            return array.count;
+        }
     }
     return 0;
 }
@@ -193,7 +197,7 @@ static CGFloat cellHeight = 55;
     NSString *title;
     if(component < _componentCount){
         NSArray *array = _dataConfiguration.dataSource[@(component)];
-        if(array.count > row){
+        if(array && array.count > row){
             YLAwesomeData *data = array[row];
             title = data.name;
         }
@@ -206,12 +210,15 @@ static CGFloat cellHeight = 55;
     if(component < _componentCount){
         //remember the select data
         NSArray *array = _dataConfiguration.dataSource[@(component)];
-        YLAwesomeData *currentData = array[row];
-        if(_tmpSelectedData.count > component){
-            _tmpSelectedData[component] = currentData;
-        }else{
-            [_tmpSelectedData addObject:currentData];
+        if(array && array.count > row){
+            YLAwesomeData *currentData = array[row];
+            if(_tmpSelectedData.count > component){
+                _tmpSelectedData[component] = currentData;
+            }else{
+                [_tmpSelectedData addObject:currentData];
+            }
         }
+        
         //ex: when select first component, the second to the last component data need refresh
         for(NSInteger nextCom = component + 1; nextCom < _componentCount; nextCom++){
             //reload data

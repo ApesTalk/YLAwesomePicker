@@ -156,30 +156,34 @@
 
 - (NSArray *)citysInProvince:(NSInteger)pId
 {
+    NSMutableArray *citys = [NSMutableArray array];
     NSString *cityPath = [[NSBundle mainBundle]pathForResource:@"city" ofType:@"json"];
     NSData *cityData = [NSData dataWithContentsOfFile:cityPath];
     NSDictionary *cityDictionary = [NSJSONSerialization JSONObjectWithData:cityData options:0 error:nil];
     NSArray *firstCityArray = [cityDictionary objectForKey:[NSString stringWithFormat:@"%li",pId]];
-    NSMutableArray *citys = [NSMutableArray arrayWithCapacity:firstCityArray.count];
-    for(NSInteger i = 0; i < firstCityArray.count; i++){
-        NSDictionary *tmpDic = firstCityArray[i];
-        YLAwesomeData *data = [[YLAwesomeData alloc]initWithId:[tmpDic[@"id"]integerValue] name:tmpDic[@"name"]];
-        [citys addObject:data];
+    if(firstCityArray){
+        for(NSInteger i = 0; i < firstCityArray.count; i++){
+            NSDictionary *tmpDic = firstCityArray[i];
+            YLAwesomeData *data = [[YLAwesomeData alloc]initWithId:[tmpDic[@"id"]integerValue] name:tmpDic[@"name"]];
+            [citys addObject:data];
+        }
     }
     return citys;
 }
 
 - (NSArray *)areasInCity:(NSInteger)cId
 {
+    NSMutableArray *areas = [NSMutableArray array];
     NSString *areaPath = [[NSBundle mainBundle]pathForResource:@"area" ofType:@"json"];
     NSData *areaData = [NSData dataWithContentsOfFile:areaPath];
     NSDictionary *areaDictionary = [NSJSONSerialization JSONObjectWithData:areaData options:0 error:nil];
     NSArray *areaArray = [areaDictionary objectForKey:[NSString stringWithFormat:@"%li",cId]];
-    NSMutableArray *areas = [NSMutableArray arrayWithCapacity:areaArray.count];
-    for(NSInteger i = 0; i < areaArray.count; i++){
-        NSDictionary *tmpDic = areaArray[i];
-        YLAwesomeData *data = [[YLAwesomeData alloc]initWithId:[tmpDic[@"id"]integerValue] name:tmpDic[@"name"]];
-        [areas addObject:data];
+    if(areaArray){
+        for(NSInteger i = 0; i < areaArray.count; i++){
+            NSDictionary *tmpDic = areaArray[i];
+            YLAwesomeData *data = [[YLAwesomeData alloc]initWithId:[tmpDic[@"id"]integerValue] name:tmpDic[@"name"]];
+            [areas addObject:data];
+        }
     }
     return areas;
 }
@@ -208,9 +212,11 @@
 
 - (void)updateDataSourceWithIndex:(NSInteger)index data:(NSArray *)data
 {
-    NSMutableDictionary *tmpDic = [NSMutableDictionary dictionaryWithDictionary:self.dataSource];
-    tmpDic[@(index)] = data;
-    self.dataSource = tmpDic;
+    if(data){
+        NSMutableDictionary *tmpDic = [NSMutableDictionary dictionaryWithDictionary:self.dataSource];
+        tmpDic[@(index)] = data;
+        self.dataSource = tmpDic;
+    }
 }
 
 - (NSArray *)dataInComponent:(NSInteger)nComponent selectedComponent:(NSInteger)sComponent row:(NSInteger)row
@@ -241,26 +247,32 @@
     }else if(_type == YLDataConfigTypeAddress){
         if(sComponent == 0){//select province,then refresh citys and areas
             NSArray *provinces = self.dataSource[@0];
-            YLAwesomeData *currentProvince = provinces[row];
-            NSArray *citys = [self citysInProvince:currentProvince.objId];
-            NSArray *areas = [NSArray array];
-            if(citys.count > 0){
-                YLAwesomeData *firstCity = citys[0];
-                areas = [self areasInCity:firstCity.objId];
+            if(provinces && provinces.count > row){
+                YLAwesomeData *currentProvince = provinces[row];
+                NSArray *citys = [self citysInProvince:currentProvince.objId];
+                NSArray *areas = [NSArray array];
+                if(citys.count > 0){
+                    YLAwesomeData *firstCity = citys[0];
+                    areas = [self areasInCity:firstCity.objId];
+                }
+                if(nComponent == 1){
+                    [self updateDataSourceWithIndex:1 data:citys];
+                    return citys;
+                }else if (nComponent == 2){
+                    [self updateDataSourceWithIndex:2 data:areas];
+                    return areas;
+                }
             }
-            if(nComponent == 1){
-                [self updateDataSourceWithIndex:1 data:citys];
-                return citys;
-            }else if (nComponent == 2){
+            return @[];
+        }else if (sComponent == 1){//select city,then refresh areas
+            NSArray *citys = self.dataSource[@1];
+            if(citys && citys.count > row){
+                YLAwesomeData *currentCity = citys[row];
+                NSArray *areas = [self areasInCity:currentCity.objId];
                 [self updateDataSourceWithIndex:2 data:areas];
                 return areas;
             }
-        }else if (sComponent == 1){//select city,then refresh areas
-            NSArray *citys = self.dataSource[@1];
-            YLAwesomeData *currentCity = citys[row];
-            NSArray *areas = [self areasInCity:currentCity.objId];
-            [self updateDataSourceWithIndex:2 data:areas];
-            return areas;
+            return @[];
         }
     }else if (nComponent < _dataSource.allKeys.count){
         NSArray *data = _dataSource[@(nComponent)];

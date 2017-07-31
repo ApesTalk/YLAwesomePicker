@@ -82,7 +82,7 @@ static NSString *cellIdentifier = @"cellIdenfier";
     if(row < 6){
         YLDataConfigType type = YLDataConfigTypeGender + row;
         NSArray *selectedData = testData.data;
-        YLDataConfiguration *config = [[YLDataConfiguration alloc]initWithType:YLDataConfigTypeGender selectedData:selectedData];
+        YLDataConfiguration *config = [[YLDataConfiguration alloc]initWithType:type selectedData:selectedData];
         YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initWithTitle:testData.title
                                                                                   config:config
                                                                                 callBack:^(NSArray *selectedData) {
