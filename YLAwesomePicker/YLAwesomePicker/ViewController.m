@@ -33,7 +33,8 @@ static NSString *cellIdentifier = @"cellIdenfier";
                      [[YLTestData alloc]initWithTitle:@"请选择开始时间"],
                      [[YLTestData alloc]initWithTitle:@"请选择结束时间"],
                      [[YLTestData alloc]initWithTitle:@"请选择地址"],
-                     [[YLTestData alloc]initWithTitle:@"自定义其他类型"]];
+                     [[YLTestData alloc]initWithTitle:@"自定义其他类型"],
+                     [[YLTestData alloc]initWithTitle:@"选择日期"]];
     _table = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     _table.delegate = self;
     _table.dataSource = self;
@@ -90,7 +91,7 @@ static NSString *cellIdentifier = @"cellIdenfier";
             [tableView reloadData];
         }];
         [sheet showInController:self];
-    }else{
+    }else if(row == 6){
         NSArray *selectedData = testData.data;
         NSDictionary *data = [self testDic];
         YLDataConfiguration *config = [[YLDataConfiguration alloc]initWithData:data selectedData:selectedData];
@@ -99,8 +100,18 @@ static NSString *cellIdentifier = @"cellIdenfier";
             [tableView reloadData];
         }];
         [sheet showInController:self];
+    }else{
+        //select date
+        YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initDatePickerWithTitle:testData.title callBack:^(NSDate *date) {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"yyyy年MM月dd日"];
+            testData.data = @[[formatter stringFromDate:date]];
+            [tableView reloadData];
+        }];
+        //you can set the datepicker property here
+        sheet.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        [sheet showInController:self];
     }
-    
 }
 
 - (NSDictionary *)testDic

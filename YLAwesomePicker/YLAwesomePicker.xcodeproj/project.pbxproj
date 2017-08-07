@@ -484,7 +484,7 @@
 				DEVELOPMENT_TEAM = M3Y7JKHK66;
 				INFOPLIST_FILE = YLAwesomePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambert.YLAwesomePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -496,7 +496,7 @@
 				DEVELOPMENT_TEAM = M3Y7JKHK66;
 				INFOPLIST_FILE = YLAwesomePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dailekeji.YLAwesomePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambert.YLAwesomePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -42,6 +42,15 @@ static CGFloat cellHeight = 55;
     return self;
 }
 
+- (instancetype)initDatePickerWithTitle:(NSString *)title callBack:(YLAwesomeSelectDateCallBack)callBack
+{
+    if(self = [super init]){
+        self.titleLabel.text = title;
+        self.dateCallBack = callBack;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -49,7 +58,9 @@ static CGFloat cellHeight = 55;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cancel)];
     [self.view addGestureRecognizer:tapGesture];
     [self.view addSubview:self.contentView];
-    [self fetchData];
+    if(_dataConfiguration){
+        [self fetchData];
+    }
     [self showContentView];
 }
 
@@ -67,7 +78,11 @@ static CGFloat cellHeight = 55;
         [_contentView addSubview:self.titleLabel];
         [_contentView addSubview:self.ensureBtn];
         [_contentView addSubview:self.line];
-        [_contentView addSubview:self.picker];
+        if(_dataConfiguration){//picker view
+            [_contentView addSubview:self.picker];
+        }else{//date picker view
+            [_contentView addSubview:self.datePicker];
+        }
     }
     return _contentView;
 }
@@ -133,6 +148,19 @@ static CGFloat cellHeight = 55;
         _picker.showsSelectionIndicator = YES;
     }
     return _picker;
+}
+
+- (UIDatePicker *)datePicker
+{
+    if(!_datePicker){
+        _datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, headerHeight + 1, kFrameWidth, maxHeight - headerHeight - 1)];
+        [_datePicker setDate:[NSDate date] animated:NO];
+        [_datePicker setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"zh_CN"]];
+        NSDate *maxDate = [NSDate date];
+        [_datePicker setMaximumDate:maxDate];
+        [_datePicker setDatePickerMode:UIDatePickerModeDate];
+    }
+    return _datePicker;
 }
 
 - (void)fetchData
@@ -290,8 +318,12 @@ static CGFloat cellHeight = 55;
 
 - (void)ensure
 {
-    if(_callBack){
-        _callBack(_tmpSelectedData);
+    if(_dataConfiguration){
+        if(_callBack){
+            _callBack(_tmpSelectedData);
+        }
+    }else if(_dateCallBack){
+        _dateCallBack(_datePicker.date);
     }
     [self dismissContentView];
 }
