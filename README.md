@@ -61,6 +61,22 @@ YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initWithTitle
 [sheet showInController:self];                           
 ```
 
+3.如果你需要选择日期（1.1.0新增）：
+
+```
+YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initDatePickerWithTitle:testData.title
+                                                                                          callBack:^(NSDate *date) {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"yyyy年MM月dd日"];
+            testData.data = @[[formatter stringFromDate:date]];
+            [tableView reloadData];
+        }];
+//you can set the datepicker property here
+sheet.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+sheet.datePicker.date = [NSDate date];
+[sheet showInController:self];
+```
+
 对，数据选择就应该这么简单！
 
 

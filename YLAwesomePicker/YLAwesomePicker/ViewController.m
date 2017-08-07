@@ -95,14 +95,17 @@ static NSString *cellIdentifier = @"cellIdenfier";
         NSArray *selectedData = testData.data;
         NSDictionary *data = [self testDic];
         YLDataConfiguration *config = [[YLDataConfiguration alloc]initWithData:data selectedData:selectedData];
-        YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initWithTitle:testData.title config:config callBack:^(NSArray *selectedData) {
+        YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initWithTitle:testData.title
+                                                                                  config:config
+                                                                                callBack:^(NSArray *selectedData) {
             testData.data = selectedData;
             [tableView reloadData];
         }];
         [sheet showInController:self];
     }else{
         //select date
-        YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initDatePickerWithTitle:testData.title callBack:^(NSDate *date) {
+        YLAwesomeSheetController *sheet = [[YLAwesomeSheetController alloc]initDatePickerWithTitle:testData.title
+                                                                                          callBack:^(NSDate *date) {
             NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
             [formatter setDateFormat:@"yyyy年MM月dd日"];
             testData.data = @[[formatter stringFromDate:date]];
@@ -110,6 +113,7 @@ static NSString *cellIdentifier = @"cellIdenfier";
         }];
         //you can set the datepicker property here
         sheet.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        sheet.datePicker.date = [NSDate date];
         [sheet showInController:self];
     }
 }
